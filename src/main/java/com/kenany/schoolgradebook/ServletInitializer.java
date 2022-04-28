@@ -7,7 +7,7 @@ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer
 public class ServletInitializer extends SpringBootServletInitializer {
 
 	@Value("${spring.profiles.active}")
-	String profile;
+	private String profile;
 
 	@Override
 	protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
