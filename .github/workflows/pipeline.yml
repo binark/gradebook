@@ -30,13 +30,7 @@ jobs:
           key: ${{ runner.os }}-m2-${{ hashFiles('**/pom.xml') }}
           restore-keys: ${{ runner.os }}-m2
       - name: Run checkstyle
-        uses: nikitasavinov/checkstyle-action@0.5.1
-        with:
-          fail_on_error: true # optional, default is false
-          # Checkstyle config file
-          checkstyle_config: checkstyle.xml # default is google_checks.xml
-          # Checkstyle version
-          checkstyle_version: 8.40 # optional, default is 8.40
+        run: mvn checkstyle:check
       - name: Build and analyze
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
