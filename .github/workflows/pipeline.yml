@@ -15,5 +15,7 @@ jobs:
       - name: Build app
         uses: ./.github/actions/build
   test:
-    name: Test and QA Analysis
-    uses: ./.github/actions/test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test and QA Analysis
+        uses: ./.github/actions/test
