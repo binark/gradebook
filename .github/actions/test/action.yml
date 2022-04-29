@@ -4,12 +4,16 @@ runs:
   using: "composite"
   steps:
     - name: Tests
+      shell: bash
       run: mvn verify
     - name: Checkstyle
+      shell: bash
       run: mvn checkstyle:check
     - name: Spotbugs
+      shell: bash
       run: mvn spotbugs:check
     - name: Build and analyze
+      shell: bash
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
