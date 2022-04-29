@@ -5,5 +5,4 @@ runs:
   steps:
     - name: Build with maven
       run: mvn install -DSkipTests
-      run: echo "Build Success"
   
