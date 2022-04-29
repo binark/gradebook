@@ -18,6 +18,7 @@ jobs:
       - name: Build app
         uses: ./.github/actions/build
   test:
+    needs: build
     runs-on: ubuntu-latest
     steps:
       - name: Test and QA Analysis
