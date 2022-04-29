@@ -4,5 +4,6 @@ runs:
   using: "composite"
   steps:
     - name: Build with maven
+      shell: bash
       run: mvn install -DSkipTests
   
