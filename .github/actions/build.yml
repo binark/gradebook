@@ -1,0 +1,9 @@
+name: 'Build app'
+description: 'Simple build without test or check'
+runs:
+  using: "composite"
+  steps:
+    - name: Build with maven
+      run: mvn install -DSkipTests
+      run: echo "Build Success"
+  
