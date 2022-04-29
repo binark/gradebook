@@ -15,5 +15,5 @@ jobs:
       - name: Build app
         uses: ./.github/actions/build
   test:
-    name: Test and QA
+    name: Test and QA Analysis
     uses: ./.github/actions/test
